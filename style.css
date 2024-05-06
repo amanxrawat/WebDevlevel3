@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.root{
+    --dcyan:rgb(21, 56, 56);
+    --black:   rgb(2, 2, 2);
+}
+
+.videodiv{
+    clip-path: circle(var(--clip) at 50% 50%);
+}
+
+
+*::selection{
+    background-color: rgb(228, 140, 130);
+}
+
+*::-webkit-scrollbar{
+    display: none;
+}
+
+body[theme="black"]{
+    background-color: black;
+    /* color: white; */
+}
+
+body{
+    transition: background-color ease-out 1.5s ;
+    transition: y ease-out 1.5s;
+}
+
+/* there should be a space between the [] and .section otherwise won't work */
+body[theme="black"] .section{
+    color: rgb(246, 240, 240);
+}
+
+body[theme="cyan"]{
+    background-color: cyan;
+}
+
+body[theme="cyan"] .section{
+    color: rgb(21, 56, 56);
+}
+
+body[theme="salmon"]{
+    background-color: rgb(228, 148, 104);
+}
+body[theme="salmon"]{
+    color: rgb(95, 24, 16);
+}
+body[theme="light"]{
+    background-color: rgb(255, 255, 255);
+}
+body[theme="light"] .section{
+    color: rgb(0, 0, 0);
+}
+
+
